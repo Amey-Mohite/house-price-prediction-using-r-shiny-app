@@ -1,0 +1,30 @@
+
+Descriptive statistics
+================================================================================
+Statistic                        N      Mean     St. Dev.    Min        Max     
+--------------------------------------------------------------------------------
+ï..bathrooms                   25,731    2.6        1.0      0.0       23.0     
+bedrooms                       25,731    3.4        1.0      0.0       43.0     
+daysOnZillow                   25,731   184.7      113.4     1.0       422.0    
+lastSoldPrice                  25,731 584,999.3  450,920.2   300    41,000,000  
+latitude                       25,731   45.5        0.1      45.3      45.7     
+livingArea                     25,731  2,179.1    1,118.9    0.0     51,290.0   
+longitude                      25,731  -122.7       0.1     -123.1    -122.3    
+lotSize                        25,731 27,401.5  1,310,821.0  0.0   208,722,096.0
+price                          25,731 585,191.7  451,890.7   300    41,000,000  
+propertyTaxRate                25,731    1.1       0.02      0.0        1.1     
+resoFacts.furnished            25,731   0.001      0.03       0          1      
+resoFacts.hasAdditionalParcels 25,731    0.0        0.0       0          0      
+resoFacts.hasAssociation       25,731    0.3        0.5       0          1      
+resoFacts.hasAttachedProperty  25,731   0.05        0.2       0          1      
+resoFacts.hasGarage            25,731   0.05        0.2       0          1      
+resoFacts.hasHeating           25,731    1.0        0.2       0          1      
+resoFacts.hasHomeWarranty      25,731   0.05        0.2       0          1      
+resoFacts.hasLandLease         25,731   0.000      0.02       0          1      
+resoFacts.hasPetsAllowed       25,731   0.02        0.1       0          1      
+resoFacts.hasSpa               25,731    0.1        0.3       0          1      
+resoFacts.hasView              25,731    0.4        0.5       0          1      
+schools.0.distance             25,731    0.8        0.7      0.0        9.7     
+taxAssessedValue               25,731 493,250.1  671,542.5  100.0  95,005,450.0 
+taxHistory.0.taxIncreaseRate   25,731    0.1        1.0      -0.9      123.3    
+--------------------------------------------------------------------------------

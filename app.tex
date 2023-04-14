@@ -1,0 +1,199 @@
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\makeatletter
+\@ifundefined{AddToHook}{}{\AddToHook{package/xcolor/after}{\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}}}
+\makeatother
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\makeatletter
+\@ifundefined{AddToHook}{}{\AddToHook{package/xcolor/after}{
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+}}
+\makeatother
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[sc]{mathpazo}
+\renewcommand{\sfdefault}{lmss}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2,
+ breaklinks=false,pdfborder={0 0 1},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfstartview={XYZ null null 1}}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.8}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\floatpagefraction}{0.75}
+
+\makeatother
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+
+
+\title{}
+
+
+
+\maketitle
+The results below are generated from an R script.
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#install.packages("shiny")}
+\hlcom{#install.packages("shinydashboard")}
+\hlcom{#install.packages("maps")}
+\hlcom{#install.packages("dplyr")}
+\hlcom{#install.packages("leaflet")}
+\hlcom{#install.packages("shinycssloaders")}
+\hlcom{#install.packages("shinythemes")}
+\hlcom{#install.packages("datadigest")}
+\hlcom{#install.packages("rio")}
+\hlcom{#install.packages("DT")}
+\hlcom{#install.packages("stargazer")}
+\hlcom{#install.packages("tidyverse")}
+\hlcom{#install.packages("plotly")}
+\hlcom{#install.packages("corrplot")}
+\hlcom{#install.packages("caret")}
+\hlcom{#install.packages("shinyWidgets")}
+\hlcom{#install.packages("caTools")}
+\hlkwd{library}\hlstd{(shiny)}
+\hlkwd{source}\hlstd{(}\hlstr{"ui.R"}\hlstd{)}
+\hlkwd{source}\hlstd{(}\hlstr{"server.R"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+The R session information (including the OS info, R version and all
+packages used):
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{sessionInfo}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## R version 4.1.3 (2022-03-10)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 22000)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_India.1252  LC_CTYPE=English_India.1252   
+## [3] LC_MONETARY=English_India.1252 LC_NUMERIC=C                  
+## [5] LC_TIME=English_India.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## other attached packages:
+##  [1] broom_0.7.12          caTools_1.18.2        MASS_7.3-55          
+##  [4] caret_6.0-91          lattice_0.20-45       corrplot_0.92        
+##  [7] plotly_4.10.0         forcats_0.5.1         stringr_1.4.0        
+## [10] purrr_0.3.4           readr_2.1.2           tidyr_1.2.0          
+## [13] tibble_3.1.6          tidyverse_1.3.1       ggplot2_3.3.5        
+## [16] shinyWidgets_0.6.4    stargazer_5.2.3       DT_0.22              
+## [19] rio_0.5.29            datadigest_1.0.2      shinythemes_1.2.0    
+## [22] shinycssloaders_1.0.0 leaflet_2.1.1         dplyr_1.0.8          
+## [25] maps_3.4.0            shinydashboard_0.7.2  shiny_1.7.1          
+## 
+## loaded via a namespace (and not attached):
+##   [1] readxl_1.4.0         backports_1.4.1      Hmisc_4.6-0          plyr_1.8.7          
+##   [5] lazyeval_0.2.2       splines_4.1.3        crosstalk_1.2.0      listenv_0.8.0       
+##   [9] digest_0.6.29        foreach_1.5.2        htmltools_0.5.2      fansi_1.0.3         
+##  [13] magrittr_2.0.3       checkmate_2.0.0      cluster_2.1.2        tzdb_0.3.0          
+##  [17] openxlsx_4.2.5       recipes_0.2.0        globals_0.14.0       modelr_0.1.8        
+##  [21] gower_1.0.0          hardhat_0.2.0        jpeg_0.1-9           colorspace_2.0-3    
+##  [25] rvest_1.0.2          haven_2.4.3          xfun_0.30            crayon_1.5.1        
+##  [29] jsonlite_1.8.0       survival_3.2-13      iterators_1.0.14     glue_1.6.2          
+##  [33] gtable_0.3.0         ipred_0.9-12         future.apply_1.8.1   scales_1.1.1        
+##  [37] DBI_1.1.2            Rcpp_1.0.8.3         viridisLite_0.4.0    xtable_1.8-4        
+##  [41] htmlTable_2.4.0      foreign_0.8-82       Formula_1.2-4        stats4_4.1.3        
+##  [45] lava_1.6.10          prodlim_2019.11.13   htmlwidgets_1.5.4    httr_1.4.2          
+##  [49] RColorBrewer_1.1-3   ellipsis_0.3.2       pkgconfig_2.0.3      nnet_7.3-17         
+##  [53] sass_0.4.1           dbplyr_2.1.1         utf8_1.2.2           tidyselect_1.1.2    
+##  [57] rlang_1.0.2          reshape2_1.4.4       later_1.3.0          munsell_0.5.0       
+##  [61] cellranger_1.1.0     tools_4.1.3          cachem_1.0.6         cli_3.2.0           
+##  [65] generics_0.1.2       evaluate_0.15        fastmap_1.1.0        yaml_2.3.5          
+##  [69] ModelMetrics_1.2.2.2 knitr_1.38           fs_1.5.2             zip_2.2.0           
+##  [73] future_1.24.0        nlme_3.1-155         mime_0.12            xml2_1.3.3          
+##  [77] compiler_4.1.3       rstudioapi_0.13      curl_4.3.2           png_0.1-7           
+##  [81] reprex_2.0.1         bslib_0.3.1          stringi_1.7.6        highr_0.9           
+##  [85] Matrix_1.4-0         vctrs_0.4.0          pillar_1.7.0         lifecycle_1.0.1     
+##  [89] jquerylib_0.1.4      bitops_1.0-7         data.table_1.14.2    httpuv_1.6.5        
+##  [93] R6_2.5.1             latticeExtra_0.6-29  promises_1.2.0.1     gridExtra_2.3       
+##  [97] parallelly_1.31.0    codetools_0.2-18     assertthat_0.2.1     fontawesome_0.2.2   
+## [101] withr_2.5.0          parallel_4.1.3       hms_1.1.1            grid_4.1.3          
+## [105] rpart_4.1.16         timeDate_3043.102    class_7.3-20         pROC_1.18.0         
+## [109] lubridate_1.8.0      base64enc_0.1-3      tinytex_0.38
+\end{verbatim}
+\begin{alltt}
+\hlkwd{Sys.time}\hlstd{()}
+\end{alltt}
+\begin{verbatim}
+## [1] "2022-04-18 22:39:03 IST"
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+\end{document}
